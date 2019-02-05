@@ -1,0 +1,33 @@
+﻿@model AgiliWebMvc.Models.Restaurantes
+@{
+    ViewData["Title"] = "DeletarRestaurante";
+}
+
+<h2>Deletar Restaurante</h2>
+
+<h3>Tem certeza que quer deletar ?</h3>
+
+<div>
+    <h4>Restaurante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nome_rest)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.cnpj_rest)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telefone_rest)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.endereco_rest)
+        </dd>
+    </dl>
+    <form asp-action="DeletarRestaurante">
+        <input type="hidden" asp-for="id" />
+        <input type="submit" value="Deletar" class="btn btn-danger" />
+        <a asp-action="FindRestaurantes">Voltar</a>
+    </form>
+</div>

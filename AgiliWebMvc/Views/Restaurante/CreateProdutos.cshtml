@@ -1,0 +1,31 @@
+﻿@model AgiliWebMvc.Models.ViewModels.ProdutoFormViewModel;
+@{
+    ViewData["Title"] = "CreateProdutos";
+}
+
+<h2>Cadastro Produto</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateProduto">
+            <div class="form-group">
+                <label asp-for="produto.nome_prod" class="control-label">NOME</label>
+                <input asp-for="produto.nome_prod" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="produto.valor_produto" class="control-label">Valor unit</label>
+                <input asp-for="produto.valor_produto" class="form-control" />
+            </div>
+           <div class="form-group">
+                <label asp-for="restaurantes.cnpj_rest" class="control-label">Confirmar CNPJ</label>
+                <input asp-for="restaurantes.cnpj_rest" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+<a asp-action="Index">Voltar</a>
+
+

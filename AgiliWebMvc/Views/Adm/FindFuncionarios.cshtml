@@ -1,0 +1,49 @@
+﻿@model IEnumerable<AgiliWebMvc.Models.Funcionarios>
+@{
+    ViewData["Title"] = "FindFuncionarios";
+}
+
+<h2>Lista Funcionarios</h2>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr class="success">
+            <th>
+                @Html.DisplayNameFor(model => model.nome_func)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpf_func)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.senha_func)
+            </th>
+            <th>
+
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nome_func)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cpf_func)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.senha_func)
+                </td>
+                <td>
+                    <a asp-action="EditFuncionario" asp-route-id="@item.id">Editar</a>
+                    <a asp-action="DeletarFuncionario" asp-route-id="@item.id">Delete</a>
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+<a asp-action="Index">Voltar</a>

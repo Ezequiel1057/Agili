@@ -1,0 +1,43 @@
+﻿@model AgiliWebMvc.Models.Restaurantes;
+@{
+    ViewData["Title"] = "CreateRestaurante";
+}
+
+<h2>Cadastro</h2>
+
+<h4>Restaurante</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateRestaurante">
+            <div class="form-group">
+                <label asp-for="nome_rest" class="control-label">NOME</label>
+                <input asp-for="nome_rest" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="cnpj_rest" class="control-label">CNPJ</label>
+                <input asp-for="cnpj_rest" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="telefone_rest" class="control-label">TELEFONE</label>
+                <input asp-for="telefone_rest" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="endereco_rest" class="control-label">ENDERECO</label>
+                <input asp-for="endereco_rest" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="senha_rest" class="control-label">SENHA</label>
+                <input asp-for="senha_rest" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+<a asp-action="Index">Voltar</a>
